@@ -21,7 +21,18 @@ def _():
 @app.cell
 def _(pd):
     df = pd.read_csv('taxi.csv',
-                    )
+                    parse_dates=['tpep_pickup_datetime', 'tpep_dropoff_datetime'])
+    return (df,)
+
+
+@app.cell
+def _(df):
+    df.head()
+    return
+
+
+@app.cell
+def _():
     return
 
 
