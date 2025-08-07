@@ -48,9 +48,12 @@ def _(df, min_distance):
     return
 
 
-@app.cell
-def _():
-    return
+app._unparsable_cell(
+    r"""
+    df.
+    """,
+    name="_"
+)
 
 
 if __name__ == "__main__":
