@@ -15,7 +15,7 @@ def _():
 @app.cell
 def _():
     import marimo as mo
-    return
+    return (mo,)
 
 
 @app.cell
@@ -32,7 +32,8 @@ def _(df):
 
 
 @app.cell
-def _():
+def _(mo):
+    min_distance = mo.ui.slider()
     return
 
 
