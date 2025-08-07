@@ -50,7 +50,7 @@ def _(df, min_distance):
 
 app._unparsable_cell(
     r"""
-    df.
+    pd.read_csv(
     """,
     name="_"
 )
