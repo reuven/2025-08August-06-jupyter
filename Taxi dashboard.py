@@ -32,7 +32,8 @@ def _(df):
 
 
 @app.cell
-def _():
+def _(df):
+    df.pl
     return
 
 
