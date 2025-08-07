@@ -33,7 +33,8 @@ def _(df):
 
 @app.cell
 def _(mo):
-    min_distance = mo.ui.slider()
+    min_distance = mo.ui.slider(0, 200)
+    min_distance
     return
 
 
