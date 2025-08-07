@@ -35,14 +35,14 @@ def _(df):
 def _(mo):
     min_distance = mo.ui.slider(0, 200)
     min_distance
-    return
+    return (min_distance,)
 
 
 @app.cell
-def _(df):
+def _(df, min_distance):
     (
         df
-        .loc[lambda df_: df_['trip_distance'] > 0]
+        .loc[lambda df_: df_['trip_distance'] > min_distance.value]
         .plot.scatter(x='trip_distance', y='total_amount')
     )
     return
