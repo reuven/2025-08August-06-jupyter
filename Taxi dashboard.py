@@ -32,10 +32,15 @@ def _(df):
 
 
 @app.cell
+def _():
+    return
+
+
+@app.cell
 def _(df):
     (
         df
-        .loc[lambda df_: df_['trip_distance']]
+        .loc[lambda df_: df_['trip_distance'] > 0]
         .plot.scatter(x='trip_distance', y='total_amount')
     )
     return
