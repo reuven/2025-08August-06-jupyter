@@ -35,7 +35,7 @@ def _(df):
 def _(df):
     (
         df
-    
+        .loc[lambda df_: df_['trip_distance']]
         .plot.scatter(x='trip_distance', y='total_amount')
     )
     return
