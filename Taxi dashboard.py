@@ -31,13 +31,14 @@ def _(df):
     return
 
 
-app._unparsable_cell(
-    r"""
+@app.cell
+def _(df):
     (
-    df.plot.scatter(x='trip_distance', y='total_amount')
-    """,
-    name="_"
-)
+        df
+    
+        .plot.scatter(x='trip_distance', y='total_amount')
+    )
+    return
 
 
 @app.cell
